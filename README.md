@@ -41,7 +41,7 @@
     **Routes (`src/routes/user.routes.ts`)**
     - `GET /` = get all users
     - `GET /check-auth` = check auth cookie/s
-    - `POST /login` = check if username exist, return cookie/s with auth, id/username (sending id/username as a cookie is not usually a good practice but we'll just use this for now!)
+    - `POST /login` = check if username exist, return cookie/s with auth, id/username (sending id/username as a cookie with cookie-parser is not usually a good practice as it exposes the data but we'll just use this for now! Using session-cookie or JWT is safer.)
     - `GET /logout` = clear the cookies
     - `GET /:id` = get user by id
     - `POST /` = add user
