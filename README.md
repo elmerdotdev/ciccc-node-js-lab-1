@@ -4,7 +4,7 @@
 
 ## Instructions
 
-1. Run `npm install` for both the **backend** and **frontend** directories to install the necessary packages. Some of the starter files have also been added in already such as `.env` and `tsconfig.json` so that you no longer have to create them yourself.
+1. Run `npm install` for both the **backend** and **frontend** directories to install the necessary packages. Some of the starter files have also been added in already such as `.gitignore` and `tsconfig.json` so that you no longer have to create them yourself.
 2. Create your server, routes, controllers, and models inside your backend. You have full control over your backend so feel free to add or create your own functions/methods if necessary:
   
     **Model (`src/models/user.model.ts`)**
