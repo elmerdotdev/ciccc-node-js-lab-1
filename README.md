@@ -39,20 +39,21 @@
     ---
 
     **Routes (`src/routes/user.routes.ts`)**
-    - `GET /` = get all users
-    - `GET /check-auth` = check auth cookie/s
+    - `POST /signup` = add user
     - `POST /login` = check if username exist, return cookie/s with auth, id/username (sending id/username as a cookie with cookie-parser is not usually a good practice as it exposes the data! Using session-cookie, or JWT is safer.)
     - `GET /logout` = clear the cookies
-    - `GET /:id` = get user by id
-    - `POST /` = add user
-    - `PUT /:id` = update user by id
-    - `DELETE /:id` = delete user by id
+    - `GET /check-auth` = check auth cookie/s
+    - `GET /users` = get all users
+    - `GET /user/:id` = get user by id
+    - `PUT /user/:id` = update user by id
+    - `DELETE /user/:id` = delete user by id
 
     ---
 
     *References:*
     - [https://github.com/elmerdotdev/ciccc-node-js-mvc-code-along]
     - [https://github.com/elmerdotdev/ciccc-node-js-cookie-fe-be-code-along]
+    - [https://github.com/elmerdotdev/ciccc-node-js-jwt-cookie]
 
 3. Make sure that you set up your CORS middleware on your `server.ts` so that your frontend can communicate with your backend.
 
@@ -71,7 +72,7 @@
     - Login (`/login`): Login form with username and password.
     - Register (`/register`): Signup form with username, password, firstname, and lastname fields.
     - Profile (`/profile`): A protected page that should only display information if the user is authenticated or logged in.
-6. When a user successfully logs in, they should be redirected to the profile page. The profile page should just display user data and a logout button:
+6. When a user successfully logs in, they should be redirected to the profile page. The profile page should just display user data and a logout button. Due to time-constraints, no need to build edit and delete functionality:
     - Username
     - First name
     - Last name
