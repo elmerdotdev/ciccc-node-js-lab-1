@@ -61,7 +61,7 @@
       origin: 'http://localhost:4321', // Astro port
       credentials: true // allow cookies
     }))
-    app.use(cookieParser('your-key'))
+    app.use(cookieParser('your-key')) // or install and use cookie-session/cookieSession instead
     app.use(express.json())
     app.use(express.urlencoded({ extended: true }))
     ```
