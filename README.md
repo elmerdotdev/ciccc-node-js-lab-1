@@ -26,7 +26,7 @@
 
     ---
 
-    **Controller (`src/models/user.controller.ts`)**
+    **Controller (`src/controllers/user.controller.ts`)**
     - getUsers()
     - getUserById()
     - getUserByUsername()
