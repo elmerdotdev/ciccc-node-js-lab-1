@@ -1,4 +1,4 @@
-# NodeJS - Lab Day 1
+# NodeJS - User Profile with Authentication
 
 **Goal:** Create a mini user profile system using Node.js and Express (MVC pattern) for the backend and Astro for the frontend/view.
 
@@ -53,7 +53,6 @@
     *References:*
     - [https://github.com/elmerdotdev/ciccc-node-js-mvc-code-along]
     - [https://github.com/elmerdotdev/ciccc-node-js-cookie-fe-be-code-along]
-    - [https://github.com/elmerdotdev/ciccc-node-js-jwt-cookie]
 
 3. Make sure that you set up your CORS middleware on your `server.ts` so that your frontend can communicate with your backend.
 
@@ -80,4 +79,4 @@
 7. Clicking on the logout button will send a request to the backend `/logout` route and then on the frontend, redirect the user to the login page.
 8. Commit and push your changes once you are done.
 
-Good luck!
+Good luck! 🎉🎉🎉
