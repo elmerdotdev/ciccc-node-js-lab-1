@@ -4,7 +4,7 @@
 
 ## Instructions
 
-1. Run `npm install` for both the **backend** and **frontend** directories to install the necessary packages. Some of the starter files have also been added in already such as `.gitignore` and `tsconfig.json` so that you no longer have to create them yourself.
+1. Install the necessary packages and files you will need for the `backend` and `frontend` directories. Some of the starter files have also been added in already such as `.gitignore` and `tsconfig.json` so that you no longer have to create them yourself.
 2. Create your server, routes, controllers, and models inside your backend. You have full control over your backend so feel free to add or create your own functions/methods if necessary:
   
     **Model (`src/models/user.model.ts`)**
@@ -12,7 +12,7 @@
     *Fields:*
     - id (string uuid)
     - username (string)
-    - password (string encrypted)
+    - password (string hashed)
     - firstname (string)
     - lastname (string)
 
@@ -20,6 +20,7 @@
     - findAll()
     - findById(id)
     - findByUsername(username)
+    - login(username, password)
     - create()
     - update(id)
     - delete(id)
@@ -28,31 +29,25 @@
 
     **Controller (`src/controllers/user.controller.ts`)**
     - getUsers()
-    - getUserById()
-    - getUserByUsername()
+    - getUserById(id)
+    - getUserByUsername(username)
+    - loginUser()
     - addUser()
-    - updateUserById()
-    - deleteUserById()
-    - checkAuth()
-    - logoutUser()
+    - updateUserById(id)
+    - deleteUserById(id)
+    - logout()
 
     ---
 
     **Routes (`src/routes/user.routes.ts`)**
     - `POST /signup` = add user
-    - `POST /login` = check if username exist, return cookie/s with auth, id/username (sending id/username as a cookie with cookie-parser is not usually a good practice as it exposes the data! Using session-cookie is safer.)
+    - `POST /login` = check if username exist, return cookie/s username
     - `GET /logout` = clear the cookies
     - `GET /check-auth` = check auth cookie/s
     - `GET /users` = get all users
     - `GET /user/:id` = get user by id
     - `PUT /user/:id` = update user by id
     - `DELETE /user/:id` = delete user by id
-
-    ---
-
-    *References:*
-    - [https://github.com/elmerdotdev/ciccc-node-js-mvc-code-along]
-    - [https://github.com/elmerdotdev/ciccc-node-js-cookie-fe-be-code-along]
 
 3. Make sure that you set up your CORS middleware on your `server.ts` so that your frontend can communicate with your backend.
 
@@ -71,7 +66,7 @@
     - Login (`/login`): Login form with username and password.
     - Register (`/register`): Signup form with username, password, firstname, and lastname fields.
     - Profile (`/profile`): A protected page that should only display information if the user is authenticated or logged in.
-6. When a user successfully logs in, they should be redirected to the profile page. The profile page should just display user data and a logout button. Due to time-constraints, no need to build edit and delete functionality:
+6. When a user successfully logs in, they should be redirected to the profile page. The profile page should just display user data and a logout button. Due to time-constraints, no need to build edit and delete functionalities:
     - Username
     - First name
     - Last name
