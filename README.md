@@ -5,7 +5,7 @@
 ## Instructions
 
 1. Create a directory called **frontend**. Inside the directory, install Astro.
-2. Install the necessary packages and files you will need for the `backend` and `frontend` directories. Some of the starter files have also been added in already such as `.gitignore` and `tsconfig.json` so that you no longer have to create them yourself.
+2. Install the necessary packages and files you will need for the `backend`. Some of the starter files have also been added in already such as `.gitignore` and `tsconfig.json` so that you no longer have to create them yourself.
 3. Create your server, routes, controllers, and models inside your backend. You have full control over your backend so feel free to add or create your own functions/methods if necessary:
   
     **Model (`src/models/user.model.ts`)**
