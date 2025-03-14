@@ -20,6 +20,7 @@
     *Methods*
     - findAll()
     - findById(id)
+    - findByUsername(username)
     - login(username, password)
     - create(newUser)
     - update(id)
@@ -30,6 +31,7 @@
     **Controller (`src/controllers/user.controller.ts`)**
     - getUsers()
     - getUserById(id)
+    - getUserByUsername()
     - loginUser()
     - addUser()
     - updateUserById(id)
@@ -40,9 +42,9 @@
 
     **Routes (`src/routes/user.routes.ts`)**
     - `POST /signup` = add user
-    - `POST /login` = check if username and password exist in database, return cookie session with user info inside
+    - `POST /login` = check if username and password exist in database, return cookie session with username inside
     - `GET /logout` = clear the cookie session
-    - `GET /check-auth` = check cookie session, return user info from cookie
+    - `GET /check-auth` = check cookie session, get username from cookie, return user info from database based on username
     - `GET /users` = get all users
     - `GET /user/:id` = get user by id
     - `PUT /user/:id` = update user by id
@@ -69,6 +71,19 @@
     - First name
     - Last name
     - Logout button
+
+      When doing your `fetch` requests, make sure to include `credentials: "include"` so that you can send and receive cookies.
+      ```js
+      // Example
+      const getUserData = async () => {
+        const res = await fetch(`http://localhost:4500/check-auth`, {
+          method: "GET",
+          credentials: "include"
+        })
+        const data = await res.json()
+        return data
+      }
+      ```
 8. Clicking on the logout button will send a request to the backend `/logout` route and then on the frontend, redirect the user to the login page.
 9. Commit and push your changes once you are done.
 
