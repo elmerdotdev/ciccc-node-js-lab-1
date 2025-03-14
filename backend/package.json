@@ -16,7 +16,8 @@
     "cookie-session": "^2.1.0",
     "cors": "^2.8.5",
     "express": "^4.21.1",
-    "uuid": "^11.0.2"
+    "uuid": "^11.0.2",
+    "dotenv": "^16.4.7"
   },
   "devDependencies": {
     "@types/bcrypt": "^5.0.2",
